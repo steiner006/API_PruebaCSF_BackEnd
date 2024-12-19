@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebaCSF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+879ce88dd74a81ae9a5ad9294e0035d542d1d12c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d180b41f6e11491b556c0b7344615128c57ff247")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebaCSF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebaCSF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

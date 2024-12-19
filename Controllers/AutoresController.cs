@@ -19,9 +19,6 @@ namespace PruebaCSF.Controllers
         [HttpPost]
         public async Task<ActionResult<Autores>> CrearAutor(Autores autor)
         {
-            //_context.Autores.Add(autor);
-            //await _context.SaveChangesAsync();
-            //return CreatedAtAction("GetAutor", new { id = autor.Id }, autor);
 
             if (autor == null)
             {
@@ -31,7 +28,6 @@ namespace PruebaCSF.Controllers
             _context.Autores.Add(autor);
             await _context.SaveChangesAsync();
 
-            // Devuelves el autor creado, incluyendo el Id generado automáticamente
             return CreatedAtAction(nameof(GetAutores), new { id = autor.Id }, autor);
         }
 
@@ -63,9 +59,9 @@ namespace PruebaCSF.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> EliminarAutor(int Id)
+        public async Task<IActionResult> EliminarAutor(int id)
         {
-            var autor = await _context.Autores.FindAsync(Id);
+            var autor = await _context.Autores.FindAsync(id);
             if (autor == null)
             {
                 return NotFound();

@@ -3,11 +3,9 @@ using PruebaCSF.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Registrar el DbContext en el contenedor de servicios
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Agregar CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -24,7 +22,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
